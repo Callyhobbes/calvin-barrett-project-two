@@ -1,0 +1,14 @@
+//Contact Page
+.contact {
+  background-color: $pine;
+  nav ul{
+    display: flex;
+    li {
+      list-style: none;
+    }
+    a {
+      @include fontStyling(2rem, 700, 1px);
+      padding: 0 10px;
+    }
+  }
+}

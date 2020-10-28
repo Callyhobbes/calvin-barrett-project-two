@@ -1,0 +1,42 @@
+.title {
+  background-image: url("../assets/home-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $black;
+  height: 75vh;
+  padding-top: 50px;
+  &--blog {
+    @extend .title;
+    background-image: url("../assets/blog-header.jpg");
+  }
+  &--contact {
+    @extend .title;
+    background-image: url("../assets/contact-header.jpg");
+  }
+}
+
+.main-nav {
+  padding: 20px 0;
+  &__list {
+    padding-top: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    &-item a {
+      @include fontStyling(2rem, 700, 1px);
+      color: $white;
+      text-decoration: none;
+      padding-bottom: 3px;
+      margin: 20px;
+    }
+    &-item a:hover,
+    &-item a:focus {
+      border-bottom: 3px solid $yellow;
+    }
+    .current-page a{
+      color: $yellow;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// Variables
+$yellow: #FFD300;
+$white: #FFFFFF;
+$almostBlack: #171B0E;
+$pine: #2B331B;
+$black: #0F0F0F;
+
+
+// Font Size Mixin
+@mixin fontStyling($sizeValue, $weightValue, $letterSpace: normal) {
+  font-size: $sizeValue;
+  font-weight: $weightValue;
+  letter-spacing: $letterSpace;
+}
+
+// Font Line Height Mixin
+@mixin lineHeight($lineHeight) {
+  line-height: $lineHeight;
+}

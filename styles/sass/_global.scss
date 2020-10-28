@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: $white;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  @include fontStyling(6.9rem, 600);
+  @include lineHeight(99.8px);
+}
+
+h2 {
+  @include fontStyling(4.5rem, 400);
+  @include lineHeight(99.8px);
+  &.yellow-text {
+    color: $yellow;
+  }
+}
+
+h3 {
+  @include fontStyling(4rem, 400, 1.3px);
+  @include lineHeight(58px);
+}
+
+h4 {
+  @include fontStyling(4rem, 400, 0.8px);
+  @include lineHeight(58px);
+}
+
+p {
+  @include fontStyling(2rem, 400, 1px);
+  @include lineHeight(28px);
+  font-family: 'Barlow', sans-serif;
+  &.cart-text {
+    text-align: left;
+    padding-bottom: 40px;
+  }
+}
+
+a.button {
+  @include fontStyling(2.24rem, 400);
+  @include lineHeight(41.6px);
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  border: 2px solid $black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: ease-in .3s;
+  &:hover,
+  &:focus {
+    color: $black;
+    background-color: $white;
+    border: 2px solid $white;
+  }
+  &--more {
+    @extend a.button;
+    color: $almostBlack;
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    &:hover,
+    &:focus {
+      color: $yellow;
+      background-color: $almostBlack;
+      border: 2px solid $yellow;
+    }
+  }
+
+}
+
+span {
+  display: block;
+  color: $almostBlack;
+  background-color: $white;
+  width: 460px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fab {
+  color: $yellow;
+}
+
+.border {
+    box-shadow: 20px 20px 0px 0px $yellow;
+    &--left {
+      @extend .border;
+      box-shadow: -20px 20px 0px 0px $yellow;
+    }
+  }

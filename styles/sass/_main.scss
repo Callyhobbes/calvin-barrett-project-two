@@ -1,0 +1,114 @@
+.about,
+.cart {
+  background-color: $pine;
+}
+
+.menu,
+.gallery {
+  background-color: $almostBlack;
+}
+
+//About Section Styling
+.about {
+  position: relative;
+  padding: 180px 0 100px;
+  img {
+    position: absolute;
+    top: -460px;
+    right: 0;
+    width: 50%;
+  }
+  .information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .info-quad {
+      width: 50%;
+    }
+  }
+}
+
+.info-quad {
+  i {
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    padding: 10px;
+    color: $almostBlack;
+    background-color: $yellow;
+    border-radius: 50%;
+    margin: 20px;
+  }
+}
+
+//Menu Section
+.rest-menu {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  .menu-top {
+    display: flex;
+    justify-content: space-between;
+    .burger-image, .menu-text {
+      width: calc((100% - 16%)/2)
+    }
+    .burger-image {
+      position: relative;
+      left: 0px;
+      top: -20px;
+    }
+  }
+  .menu-bottom {
+    display: flex;
+    justify-content: space-between;
+    .salad-image, .menu-text {
+      width: calc((100% - 16%)/2)
+    }
+    .salad-image {
+      position: absolute;
+      right: 0px;
+      bottom: -20px;
+    }
+  }
+  .menu-text {
+      padding: 40px;
+    }
+}
+
+//Cart Section
+.cart {
+  padding: 150px 0 100px;
+  img {
+    margin: 100px 0;
+  }
+  .gift-card {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+.nature {
+  display: flex;
+  justify-content: flex-start;
+  .feature {
+    width: 65%;
+  }
+  img {
+    width: 25%;
+    margin: 0px 100px 0 0;
+    align-self: center;
+  }
+}
+
+//Gallery Image Styling
+.gallery-images {
+  display: flex;
+  img {
+    padding: 50px 20px 50px 0;
+  }
+  img:nth-of-type(3) {
+    padding-right: 0;
+  }
+}
