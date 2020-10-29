@@ -40,3 +40,13 @@
     }
   }
 }
+
+.pop-out {
+  img {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 50%;
+    z-index: 10;
+  }
+}

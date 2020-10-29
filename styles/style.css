@@ -342,6 +342,28 @@ a.button--more:hover, a.button--more:focus {
   border: 2px solid #FFD300;
 }
 
+button {
+  font-size: 2.24rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 41.6px;
+  text-transform: uppercase;
+  color: #0F0F0F;
+  background-color: #FFD300;
+  border: 2px solid #FFD300;
+  text-align: center;
+  -webkit-transition: ease-in .3s;
+  transition: ease-in .3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover, button:focus {
+  color: #FFD300;
+  background-color: #171B0E;
+  border: 2px solid #FFD300;
+}
+
 span {
   display: block;
   color: #171B0E;
@@ -353,6 +375,30 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+input,
+textarea {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-style: none;
+  background-color: #171B0E;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  border-bottom: 2px solid #FFD300;
+}
+
+textarea {
+  height: 30vh;
+  width: 100%;
+  resize: none;
+  margin: 20px 0;
+  border: 2px solid #FFD300;
 }
 
 .fab {
@@ -425,6 +471,14 @@ img {
   color: #FFD300;
 }
 
+.pop-out img {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 50%;
+  z-index: 10;
+}
+
 .about,
 .cart {
   background-color: #2B331B;
@@ -440,29 +494,25 @@ img {
   padding: 180px 0 100px;
 }
 
-.about img {
-  position: absolute;
-  top: -460px;
-  right: 0;
-  width: 50%;
-}
-
 .about .information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .about .information .info-quad {
-  width: 50%;
+  width: calc(50% - 100px);
+  position: relative;
+  margin-left: 50px;
 }
 
 .info-quad i {
+  font-size: 2rem;
   width: 4.5rem;
   height: 4.5rem;
   text-align: center;
@@ -471,6 +521,13 @@ img {
   background-color: #FFD300;
   border-radius: 50%;
   margin: 20px;
+  position: absolute;
+  left: -90px;
+  top: 5px;
+}
+
+.info-quad p {
+  padding-bottom: 35px;
 }
 
 .rest-menu {
@@ -575,23 +632,70 @@ img {
 
 .contact {
   background-color: #2B331B;
+  position: relative;
 }
 
-.contact nav ul {
+.contact .contact-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact nav ul li {
+.contact ul li {
   list-style: none;
 }
 
-.contact nav ul a {
+.contact ul a {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1px;
-  padding: 0 10px;
+}
+
+.contact ul a:not(.fa-whatsapp) {
+  padding-right: 25px;
+}
+
+.details {
+  padding: 140px 0px 250px;
+}
+
+.details ul + p {
+  margin: 20px 0;
+}
+
+.contact-form {
+  position: absolute;
+  right: 60px;
+  top: -100px;
+  background-color: #171B0E;
+  padding: 60px;
+  width: 60%;
+}
+
+.contact-form .flex-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.contact-form .flex-inputs .name,
+.contact-form .flex-inputs .email {
+  width: calc(50% - 20px);
 }
 
 footer {
