@@ -293,6 +293,7 @@ h4 {
   font-weight: 400;
   letter-spacing: 0.8px;
   line-height: 58px;
+  color: #FFD300;
 }
 
 p {
@@ -756,7 +757,7 @@ time {
 }
 
 .blog-area .aside {
-  width: 25%;
+  width: 35%;
 }
 
 .pine {
@@ -780,6 +781,40 @@ time {
 .user-comments .user .user-text {
   width: calc((100% - 10%) - 20px);
   padding: 0 0 30px 30px;
+}
+
+.aside {
+  padding: 80px 80px 0 0;
+}
+
+.aside img {
+  position: relative;
+  z-index: 100;
+}
+
+.aside .featured-restaurants {
+  position: relative;
+  top: -535px;
+  background-color: #171B0E;
+  padding: 550px 30px 30px;
+  margin-left: 145px;
+  width: 80%;
+}
+
+.aside .featured-restaurants h4 + p {
+  padding-bottom: 60px;
+}
+
+.aside .featured-restaurants li {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-family: 'Barlow', sans-serif;
+  margin: 10px;
+  padding-left: 10px;
+  position: relative;
+  left: 10px;
 }
 
 footer {

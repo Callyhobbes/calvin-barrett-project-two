@@ -47,6 +47,7 @@ h3 {
 h4 {
   @include fontStyling(2.5rem, 400, 0.8px);
   @include lineHeight(58px);
+  color: $yellow;
 }
 
 p {
