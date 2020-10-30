@@ -289,7 +289,7 @@ h3 {
 }
 
 h4 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.8px;
   line-height: 58px;
@@ -401,6 +401,15 @@ textarea {
   border: 2px solid #FFD300;
 }
 
+time {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-family: 'Barlow', sans-serif;
+  color: #FFD300;
+}
+
 .fab {
   color: #FFD300;
 }
@@ -473,7 +482,7 @@ textarea {
 
 .pop-out img {
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
   right: 0;
   width: 50%;
   z-index: 10;
@@ -672,7 +681,7 @@ textarea {
   margin: 20px 0;
 }
 
-.contact-form {
+.contact-form, .contact-form--menu {
   position: absolute;
   right: 60px;
   top: -100px;
@@ -681,7 +690,14 @@ textarea {
   width: 60%;
 }
 
-.contact-form .flex-inputs {
+.contact-form--menu {
+  position: static;
+  width: 100%;
+  background-color: #2B331B;
+  padding: 40px 80px;
+}
+
+.contact-form .flex-inputs, .contact-form--menu .flex-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,9 +709,77 @@ textarea {
   padding-bottom: 20px;
 }
 
-.contact-form .flex-inputs .name,
-.contact-form .flex-inputs .email {
+.contact-form .flex-inputs .name, .contact-form--menu .flex-inputs .name,
+.contact-form .flex-inputs .email,
+.contact-form--menu .flex-inputs .email {
   width: calc(50% - 20px);
+}
+
+.blog-area {
+  background-color: #2B331B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.blog-area .blog {
+  width: 60%;
+  position: relative;
+  top: -200px;
+}
+
+.blog-area .blog h3 {
+  padding: 50px 80px 0px;
+}
+
+.blog-area .blog h2 + p {
+  font-weight: 700;
+}
+
+.blog-area .blog .job-posting {
+  position: relative;
+  right: 20px;
+  border-bottom: 5px solid #FFD300;
+  border-left: 5px solid #FFD300;
+  padding: 50px 80px 80px;
+}
+
+.blog-area .blog .job-posting > p {
+  padding-bottom: 25px;
+}
+
+.blog-area .aside {
+  width: 25%;
+}
+
+.pine {
+  background-color: #2B331B;
+}
+
+.user-comments {
+  padding: 50px 80px;
+}
+
+.user-comments .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-comments .user .user-icon {
+  width: 10%;
+}
+
+.user-comments .user .user-text {
+  width: calc((100% - 10%) - 20px);
+  padding: 0 0 30px 30px;
 }
 
 footer {

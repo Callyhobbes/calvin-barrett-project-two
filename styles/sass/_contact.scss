@@ -34,9 +34,16 @@
   background-color: $almostBlack;
   padding: 60px;
   width: 60%;
+  &--menu {
+    @extend .contact-form;
+    position: static;
+    width: 100%;
+    background-color: $pine;
+    padding: 40px 80px;
+  }
   .flex-inputs {
     display: flex;
-    justify-content: space-between;;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 20px;
     .name,

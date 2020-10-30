@@ -1,0 +1,48 @@
+.blog-area {
+  background-color: $pine;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  .blog {
+    width: 60%;
+    position: relative;
+    top: -200px;
+    h3 {
+      padding: 50px 80px 0px;
+    }
+    h2 + p {
+      font-weight: 700;
+    }
+    .job-posting {
+      position: relative;
+      right: 20px;
+      border-bottom: 5px solid $yellow;
+      border-left: 5px solid $yellow;
+      padding: 50px 80px 80px;
+    }
+    .job-posting > p {
+      padding-bottom: 25px;
+    }
+  }
+  .aside {
+    width: 25%;
+  }
+}
+
+.pine {
+  background-color: $pine;
+}
+
+.user-comments {
+  padding: 50px 80px;
+  .user {
+    display: flex;
+    .user-icon {
+      width: 10%;
+    }
+    .user-text {
+      width: calc((100% - 10%) - 20px);
+      padding: 0 0 30px 30px;
+    }
+  }
+}

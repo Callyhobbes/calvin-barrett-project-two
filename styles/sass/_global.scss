@@ -45,7 +45,7 @@ h3 {
 }
 
 h4 {
-  @include fontStyling(4rem, 400, 0.8px);
+  @include fontStyling(2.5rem, 400, 0.8px);
   @include lineHeight(58px);
 }
 
@@ -142,6 +142,13 @@ textarea {
     resize: none;
     margin: 20px 0;
     border: 2px solid $yellow;
+}
+
+time {
+  @include fontStyling(2rem, 700, 1px);
+  @include lineHeight(28px);
+  font-family: 'Barlow', sans-serif;
+  color: $yellow;
 }
 
 .fab {
