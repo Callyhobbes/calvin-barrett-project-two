@@ -4,6 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $black;
+  position: relative;
   height: 75vh;
   padding-top: 50px;
   &--blog {
@@ -44,7 +45,7 @@
 .pop-out {
   img {
     position: absolute;
-    bottom: 50px;
+    bottom: -150px;
     right: 0;
     width: 50%;
     z-index: 10;
