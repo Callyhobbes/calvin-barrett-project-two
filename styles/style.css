@@ -579,7 +579,7 @@ time {
       flex-wrap: wrap;
 }
 
-.rest-menu .menu-top {
+.rest-menu .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,41 +588,39 @@ time {
           justify-content: space-between;
 }
 
-.rest-menu .menu-top .burger-image, .rest-menu .menu-top .menu-text {
-  width: calc((100% - 16%)/2);
+.rest-menu .menu .burger-image, .rest-menu .menu .salad-image, .rest-menu .menu .text {
+  width: 45%;
 }
 
-.rest-menu .menu-top .burger-image {
+.rest-menu .menu .burger-image {
   position: relative;
   left: 0px;
   top: -20px;
 }
 
-.rest-menu .menu-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.rest-menu .menu-bottom .salad-image, .rest-menu .menu-bottom .menu-text {
-  width: calc((100% - 16%)/2);
-}
-
-.rest-menu .menu-bottom .salad-image {
-  position: relative;
+.rest-menu .salad-image {
+  position: absolute;
   right: 0px;
   bottom: -20px;
 }
 
-.rest-menu .menu-text {
-  padding: 40px;
+.text {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.text.top-right {
+  padding-right: 7vw;
+}
+
+.text.bottom-left {
+  padding-left: 7vw;
+  text-align: right;
+}
+
+.text p {
+  padding-bottom: 30px;
 }
 
 .cart {

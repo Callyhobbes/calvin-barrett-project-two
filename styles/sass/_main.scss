@@ -52,11 +52,11 @@
 .rest-menu {
   display: flex;
   flex-wrap: wrap;
-  .menu-top {
+  .menu {
     display: flex;
     justify-content: space-between;
-    .burger-image, .menu-text {
-      width: calc((100% - 16%)/2)
+    .burger-image, .salad-image, .text {
+      width: 45%
     }
     .burger-image {
       position: relative;
@@ -64,22 +64,27 @@
       top: -20px;
     }
   }
-  .menu-bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    .salad-image, .menu-text {
-      width: calc((100% - 16%)/2)
-    }
     .salad-image {
-      position: relative;
+      position: absolute;
       right: 0px;
       bottom: -20px;
     }
+}
+
+.text {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &.top-right {
+    padding-right: 7vw;
   }
-  .menu-text {
-      padding: 40px;
-    }
+  &.bottom-left {
+    padding-left: 7vw;
+    text-align: right;
+  }
+  p {
+    padding-bottom: 30px;
+  }
 }
 
 //Cart Section
