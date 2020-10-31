@@ -41,14 +41,15 @@
     background-color: $pine;
     padding: 40px 80px;
   }
-  .flex-inputs {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    .name,
-    .email {
-      width: calc(50% - 20px);
-    }
+}
+
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  .name,
+  .email {
+    width: calc(50% - 20px);
   }
 }

@@ -12,19 +12,18 @@
 .about {
   position: relative;
   padding: 180px 0 100px;
-  .information {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    .info-quad {
-      width: calc(50% - 100px);
-      position: relative;
-      margin-left: 50px;
-    }
-  }
+}
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .info-quad {
+  width: calc(50% - 100px);
+  position: relative;
+  margin-left: 50px;
   i {
     font-size: 2rem;;
     width: 4.5rem;
@@ -52,24 +51,25 @@
 .rest-menu {
   display: flex;
   flex-wrap: wrap;
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    .burger-image, .salad-image, .text {
-      width: 45%
-    }
-    .burger-image {
-      position: relative;
-      left: 0px;
-      top: -20px;
-    }
-  }
-    .salad-image {
-      position: absolute;
-      right: 0px;
-      bottom: -20px;
-    }
 }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  .burger-image, .salad-image, .text {
+    width: 45%
+  }
+  .burger-image {
+    position: relative;
+    left: 0px;
+    top: -20px;
+  }
+}
+  .salad-image {
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+  }
 
 .text {
   position: relative;

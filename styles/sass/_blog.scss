@@ -3,30 +3,32 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  .blog {
-    width: 60%;
+}
+
+.blog {
+  width: 60%;
+  position: relative;
+  top: -200px;
+  h3 {
+    padding: 50px 80px 0px;
+  }
+  h2 + p {
+    font-weight: 700;
+  }
+  .job-posting {
     position: relative;
-    top: -200px;
-    h3 {
-      padding: 50px 80px 0px;
-    }
-    h2 + p {
-      font-weight: 700;
-    }
-    .job-posting {
-      position: relative;
-      right: 20px;
-      border-bottom: 5px solid $yellow;
-      border-left: 5px solid $yellow;
-      padding: 50px 80px 80px;
-    }
-    .job-posting > p {
-      padding-bottom: 25px;
-    }
+    right: 20px;
+    border-bottom: 5px solid $yellow;
+    border-left: 5px solid $yellow;
+    padding: 50px 80px 80px;
   }
-  .aside {
-    width: 35%;
+  .job-posting > p {
+    padding-bottom: 25px;
   }
+}
+
+.aside {
+  width: 35%;
 }
 
 .pine {
@@ -54,24 +56,25 @@
     position: relative;
     z-index: 100;
   }
-  .featured-restaurants {
+}
+
+.featured-restaurants {
+  position: relative;
+  top: -535px;
+  background-color: $almostBlack;
+  padding: 550px 30px 30px;
+  margin-left: 145px;
+  width: 80%;
+  h4 + p {
+    padding-bottom: 60px;
+  }
+  li {
+    @include fontStyling(2rem, 400, 1px);
+    @include lineHeight(28px);
+    font-family: 'Barlow', sans-serif;
+    margin: 10px;
+    padding-left: 10px;
     position: relative;
-    top: -535px;
-    background-color: $almostBlack;
-    padding: 550px 30px 30px;
-    margin-left: 145px;
-    width: 80%;
-    h4 + p {
-      padding-bottom: 60px;
-    }
-    li {
-      @include fontStyling(2rem, 400, 1px);
-      @include lineHeight(28px);
-      font-family: 'Barlow', sans-serif;
-      margin: 10px;
-      padding-left: 10px;
-      position: relative;
-      left: 10px;
-    }
+    left: 10px;
   }
 }

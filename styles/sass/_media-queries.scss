@@ -1,0 +1,31 @@
+@media (max-width: 1100px) {
+  .about .information {
+    display: block;
+    .info-quad {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  //Hide Pop-Out Onion Rings
+  .pop-out {
+    img {
+      display: none;
+    }
+  }
+
+  // Add Mobile Nav
+  .mobile-bars {
+    visibility: visible;
+  }
+}
+
+// @media (max-width: 700px) {
+//   .about .information {
+//     .info-quad {
+//       margin-left: 0;
+//       display: block;
+//     }
+//   }
+// }

@@ -29,6 +29,7 @@ h4 {
 h1 {
   @include fontStyling(6.9rem, 600);
   @include lineHeight(99.8px);
+  text-shadow: 2px 2px 2px $almostBlack;
 }
 
 h2 {
@@ -115,6 +116,7 @@ span {
   color: $almostBlack;
   background-color: $white;
   width: 460px;
+  text-shadow: none;
 }
 
 img {

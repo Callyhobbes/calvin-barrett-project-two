@@ -268,6 +268,7 @@ h1 {
   font-weight: 600;
   letter-spacing: normal;
   line-height: 99.8px;
+  text-shadow: 2px 2px 2px #171B0E;
 }
 
 h2 {
@@ -370,6 +371,7 @@ span {
   color: #171B0E;
   background-color: #FFFFFF;
   width: 460px;
+  text-shadow: none;
 }
 
 img {
@@ -425,8 +427,7 @@ time {
           box-shadow: -20px 20px 0px 0px #FFD300;
 }
 
-.title, .title--blog, .title--contact {
-  background-image: url("../assets/home-header.jpg");
+.title, .title--index, .title--blog, .title--contact {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -434,6 +435,10 @@ time {
   position: relative;
   height: 75vh;
   padding-top: 50px;
+}
+
+.title--index {
+  background-image: url("../assets/home-header.jpg");
 }
 
 .title--blog {
@@ -469,6 +474,7 @@ time {
   letter-spacing: 1px;
   color: #FFFFFF;
   text-decoration: none;
+  text-shadow: 2px 2px 2px #171B0E;
   padding-bottom: 3px;
   margin: 20px;
 }
@@ -494,8 +500,11 @@ time {
   visibility: hidden;
   z-index: 15;
   position: fixed;
-  right: 15%;
-  top: 80px;
+  right: 10%;
+  top: 55px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #171B0E;
 }
 
 .mobile-bars .hamburger {
@@ -507,11 +516,11 @@ time {
 
 .mobile-checkbox {
   z-index: 100;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 60px;
   position: fixed;
-  right: 15%;
-  top: 80px;
+  right: 10%;
+  top: 55px;
   opacity: 0;
   cursor: pointer;
 }
@@ -531,7 +540,7 @@ time {
   padding: 180px 0 100px;
 }
 
-.about .information {
+.information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,7 +551,7 @@ time {
           justify-content: space-evenly;
 }
 
-.about .information .info-quad {
+.info-quad {
   width: calc(50% - 100px);
   position: relative;
   margin-left: 50px;
@@ -579,7 +588,7 @@ time {
       flex-wrap: wrap;
 }
 
-.rest-menu .menu {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,17 +597,17 @@ time {
           justify-content: space-between;
 }
 
-.rest-menu .menu .burger-image, .rest-menu .menu .salad-image, .rest-menu .menu .text {
+.menu .burger-image, .menu .salad-image, .menu .text {
   width: 45%;
 }
 
-.rest-menu .menu .burger-image {
+.menu .burger-image {
   position: relative;
   left: 0px;
   top: -20px;
 }
 
-.rest-menu .salad-image {
+.salad-image {
   position: absolute;
   right: 0px;
   bottom: -20px;
@@ -730,7 +739,7 @@ time {
   padding: 40px 80px;
 }
 
-.contact-form .flex-inputs, .contact-form--menu .flex-inputs {
+.flex-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,9 +751,8 @@ time {
   padding-bottom: 20px;
 }
 
-.contact-form .flex-inputs .name, .contact-form--menu .flex-inputs .name,
-.contact-form .flex-inputs .email,
-.contact-form--menu .flex-inputs .email {
+.flex-inputs .name,
+.flex-inputs .email {
   width: calc(50% - 20px);
 }
 
@@ -762,21 +770,21 @@ time {
           flex-direction: row-reverse;
 }
 
-.blog-area .blog {
+.blog {
   width: 60%;
   position: relative;
   top: -200px;
 }
 
-.blog-area .blog h3 {
+.blog h3 {
   padding: 50px 80px 0px;
 }
 
-.blog-area .blog h2 + p {
+.blog h2 + p {
   font-weight: 700;
 }
 
-.blog-area .blog .job-posting {
+.blog .job-posting {
   position: relative;
   right: 20px;
   border-bottom: 5px solid #FFD300;
@@ -784,11 +792,11 @@ time {
   padding: 50px 80px 80px;
 }
 
-.blog-area .blog .job-posting > p {
+.blog .job-posting > p {
   padding-bottom: 25px;
 }
 
-.blog-area .aside {
+.aside {
   width: 35%;
 }
 
@@ -825,7 +833,7 @@ time {
   z-index: 100;
 }
 
-.aside .featured-restaurants {
+.featured-restaurants {
   position: relative;
   top: -535px;
   background-color: #171B0E;
@@ -834,11 +842,11 @@ time {
   width: 80%;
 }
 
-.aside .featured-restaurants h4 + p {
+.featured-restaurants h4 + p {
   padding-bottom: 60px;
 }
 
-.aside .featured-restaurants li {
+.featured-restaurants li {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -861,4 +869,22 @@ footer .fab {
 footer p {
   text-align: center;
   padding: 5px 0;
+}
+
+@media (max-width: 1100px) {
+  .about .information {
+    display: block;
+  }
+  .about .information .info-quad {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .pop-out img {
+    display: none;
+  }
+  .mobile-bars {
+    visibility: visible;
+  }
 }
