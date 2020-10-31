@@ -45,10 +45,13 @@
 }
 
 //Menu Section
+.menu {
+  position: relative;
+}
+
 .rest-menu {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   .menu-top {
     display: flex;
     justify-content: space-between;
@@ -64,11 +67,12 @@
   .menu-bottom {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     .salad-image, .menu-text {
       width: calc((100% - 16%)/2)
     }
     .salad-image {
-      position: absolute;
+      position: relative;
       right: 0px;
       bottom: -20px;
     }

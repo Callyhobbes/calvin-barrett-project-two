@@ -541,13 +541,16 @@ time {
   padding-bottom: 35px;
 }
 
+.menu {
+  position: relative;
+}
+
 .rest-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative;
 }
 
 .rest-menu .menu-top {
@@ -576,6 +579,10 @@ time {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .rest-menu .menu-bottom .salad-image, .rest-menu .menu-bottom .menu-text {
@@ -583,7 +590,7 @@ time {
 }
 
 .rest-menu .menu-bottom .salad-image {
-  position: absolute;
+  position: relative;
   right: 0px;
   bottom: -20px;
 }
@@ -684,12 +691,12 @@ time {
 }
 
 .contact-form, .contact-form--menu {
-  position: absolute;
-  right: 60px;
+  position: relative;
+  right: -20px;
   top: -100px;
   background-color: #171B0E;
   padding: 60px;
-  width: 60%;
+  width: 70%;
 }
 
 .contact-form--menu {
@@ -786,6 +793,7 @@ time {
 
 .aside {
   padding: 80px 80px 0 0;
+  position: relative;
 }
 
 .aside img {
