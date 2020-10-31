@@ -490,6 +490,32 @@ time {
   z-index: 10;
 }
 
+.mobile-bars {
+  visibility: hidden;
+  z-index: 15;
+  position: fixed;
+  right: 15%;
+  top: 80px;
+}
+
+.mobile-bars .hamburger {
+  width: 40px;
+  height: 3px;
+  margin: 8px 0px;
+  background-color: #FFFFFF;
+}
+
+.mobile-checkbox {
+  z-index: 100;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  right: 15%;
+  top: 80px;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .about,
 .cart {
   background-color: #2B331B;
