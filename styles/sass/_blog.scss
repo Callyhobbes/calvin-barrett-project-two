@@ -5,10 +5,20 @@
   flex-direction: row-reverse;
 }
 
-.blog {
+.flex-right {
   width: 60%;
+  margin-left: 5%;
   position: relative;
   top: -200px;
+}
+
+.flex-left {
+  width: 35%;
+  max-width: 500px;
+  margin: 120px 30px 0 7%;
+}
+
+article {
   h3 {
     padding: 50px 80px 0px;
   }
@@ -27,10 +37,6 @@
   }
 }
 
-.aside {
-  width: 35%;
-}
-
 .pine {
   background-color: $pine;
 }
@@ -41,30 +47,36 @@
     display: flex;
     .user-icon {
       width: 10%;
+      max-width: 100px;
     }
     .user-text {
       width: calc((100% - 10%) - 20px);
       padding: 0 0 30px 30px;
+      position: relative;
+      top: -10px;
     }
   }
 }
 
-.aside {
-  padding: 80px 80px 0 0;
+.user:nth-child(1) {
+    margin-bottom: 60px;
+  }
+
+aside {
   position: relative;
   img {
-    position: relative;
+    width: 125%;
+    position: absolute;
     z-index: 100;
+    right: 5%;
+    top: -20px;
   }
 }
 
 .featured-restaurants {
   position: relative;
-  top: -535px;
   background-color: $almostBlack;
-  padding: 550px 30px 30px;
-  margin-left: 145px;
-  width: 80%;
+  padding: 120% 30px 30px;
   h4 + p {
     padding-bottom: 60px;
   }
