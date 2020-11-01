@@ -6,9 +6,27 @@
 }
 
 @media (max-width: 1300px) {
-  // .rest-menu {
-  //   display: block;
-  // }
+  .contact-us {
+    flex-direction: column-reverse;
+  }
+
+  .contact-form {
+    width: 90%;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .details {
+    padding: 0 0 50px;
+    text-align: center;
+    ul{
+      justify-content: center;
+      a {
+        font-size: 4rem;
+        margin: 0 30px;
+      }
+    }
+  }
 
   .menu {
     flex-direction: column;
@@ -148,5 +166,10 @@
   // Remove restaurant image
   .banner {
     display: none;
+  }
+
+  .name,
+  .email {
+    width: 100%;
   }
 }

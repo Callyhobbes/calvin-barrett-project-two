@@ -397,7 +397,7 @@ input {
 }
 
 textarea {
-  height: 30vh;
+  height: 250px;
   width: 100%;
   resize: none;
   margin: 20px 0;
@@ -754,8 +754,8 @@ time {
   padding-bottom: 20px;
 }
 
-.flex-inputs .name,
-.flex-inputs .email {
+.name,
+.email {
   width: calc(50% - 20px);
 }
 
@@ -882,6 +882,30 @@ footer p {
 }
 
 @media (max-width: 1300px) {
+  .contact-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact-form, .contact-form--menu {
+    width: 90%;
+    right: 0;
+    margin: 0 auto;
+  }
+  .details {
+    padding: 0 0 50px;
+    text-align: center;
+  }
+  .details ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .details ul a {
+    font-size: 4rem;
+    margin: 0 30px;
+  }
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1015,5 +1039,9 @@ footer p {
   }
   .banner {
     display: none;
+  }
+  .name,
+  .email {
+    width: 100%;
   }
 }
