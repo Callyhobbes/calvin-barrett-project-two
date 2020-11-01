@@ -269,6 +269,8 @@ h1 {
   letter-spacing: normal;
   line-height: 99.8px;
   text-shadow: 2px 2px 2px #171B0E;
+  position: relative;
+  z-index: 1000;
 }
 
 h2 {
@@ -434,6 +436,7 @@ time {
   background-color: #0F0F0F;
   position: relative;
   height: 75vh;
+  min-height: 500px;
   padding-top: 50px;
 }
 
@@ -501,17 +504,40 @@ time {
   z-index: 100;
   position: fixed;
   right: 4%;
-  top: 50px;
+  top: 65px;
   padding: 5px 10px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
-.mobile-bars .hamburger {
+.burger {
   width: 40px;
   height: 3px;
-  margin: 8px 0px;
   background-color: #FFD300;
   -webkit-box-shadow: 2px 2px 2px #171B0E;
           box-shadow: 2px 2px 2px #171B0E;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #FFD300;
+  -webkit-box-shadow: 2px 2px 2px #171B0E;
+          box-shadow: 2px 2px 2px #171B0E;
+}
+
+.burger::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.burger::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .mobile-checkbox {
@@ -1033,9 +1059,6 @@ footer p {
   .main-nav__list-item {
     padding: 10px 0;
     text-align: right;
-  }
-  input:checked + .main-nav {
-    display: block;
   }
   h1 {
     position: absolute;
