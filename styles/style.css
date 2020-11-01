@@ -1046,9 +1046,10 @@ footer p {
   .main-nav {
     position: fixed;
     z-index: 200;
-    right: 3%;
+    right: 0;
     top: 100px;
     display: none;
+    padding-right: 3%;
   }
   .main-nav__list {
     -webkit-box-orient: vertical;
@@ -1059,6 +1060,11 @@ footer p {
   .main-nav__list-item {
     padding: 10px 0;
     text-align: right;
+  }
+  input:checked ~ .main-nav {
+    display: block;
+    background-color: rgba(23, 27, 14, 0.5);
+    border-radius: 20px 0 0px 20px;
   }
   h1 {
     position: absolute;
