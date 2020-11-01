@@ -498,7 +498,7 @@ time {
 
 .mobile-bars {
   visibility: hidden;
-  z-index: 15;
+  z-index: 100;
   position: fixed;
   right: 10%;
   top: 55px;
@@ -515,7 +515,7 @@ time {
 }
 
 .mobile-checkbox {
-  z-index: 100;
+  z-index: 150;
   height: 50px;
   width: 60px;
   position: fixed;
@@ -667,18 +667,21 @@ time {
       align-self: center;
 }
 
-.gallery-images {
+.gallery-images ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
+  padding: 50px 0;
 }
 
-.gallery-images img {
-  padding: 50px 20px 50px 0;
+.gallery-images ul li {
+  margin-right: 3%;
+  width: calc((100% - 6%) / 3);
 }
 
-.gallery-images img:nth-of-type(3) {
-  padding-right: 0;
+.gallery-images ul li:nth-of-type(3) {
+  margin-right: 0;
 }
 
 .contact {
@@ -896,7 +899,7 @@ footer p {
     min-width: 300px;
   }
   .menu .text {
-    width: 100%;
+    width: 60%;
     padding: 30px;
     text-align: center;
   }
@@ -934,6 +937,47 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .main-nav {
+    position: fixed;
+    z-index: 200;
+    right: 9%;
+    top: 100px;
+    display: none;
+  }
+  .main-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .main-nav__list-item {
+    padding: 10px 0;
+    text-align: right;
+  }
+  input:checked + .main-nav {
+    display: block;
+  }
+  h1 {
+    position: absolute;
+    left: 5%;
+    top: 50px;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 20px;
+  }
+  h1 span {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 200px;
+  }
+  /* Gallery Adjustment to 2 pictures */
+  .gallery-images ul li {
+    width: calc((100% - 6%) / 2);
+  }
+  .gallery-images ul li:nth-of-type(2) {
+    display: none;
+  }
   .pop-out img {
     display: none;
   }
@@ -942,6 +986,9 @@ footer p {
   }
   .about {
     padding: 60px 0;
+  }
+  h2 {
+    line-height: 58px;
   }
 }
 
@@ -965,5 +1012,8 @@ footer p {
   }
   .info-quad h2 {
     text-align: center;
+  }
+  .banner {
+    display: none;
   }
 }
