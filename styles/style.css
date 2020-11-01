@@ -500,8 +500,8 @@ time {
   visibility: hidden;
   z-index: 100;
   position: fixed;
-  right: 10%;
-  top: 55px;
+  right: 4%;
+  top: 50px;
   padding: 5px 10px;
 }
 
@@ -519,8 +519,8 @@ time {
   height: 50px;
   width: 60px;
   position: fixed;
-  right: 10%;
-  top: 55px;
+  right: 4%;
+  top: 50px;
   opacity: 0;
   cursor: pointer;
 }
@@ -823,17 +823,18 @@ article .job-posting > p {
 .user-comments .user .user-icon {
   width: 10%;
   max-width: 100px;
-}
-
-.user-comments .user .user-text {
-  width: calc((100% - 10%) - 20px);
-  padding: 0 0 30px 30px;
-  position: relative;
-  top: -10px;
+  min-width: 60px;
 }
 
 .user:nth-child(1) {
   margin-bottom: 60px;
+}
+
+.user-text {
+  width: calc((100% - 10%) - 20px);
+  padding: 0 0 30px 30px;
+  position: relative;
+  top: -10px;
 }
 
 aside {
@@ -848,17 +849,23 @@ aside img {
   top: -20px;
 }
 
-.featured-restaurants {
+.featured-restaurants,
+.recent-posts {
   position: relative;
   background-color: #171B0E;
-  padding: 120% 30px 30px;
+  padding: 0 30px 30px;
 }
 
-.featured-restaurants h4 + p {
+.featured-restaurants h4 + p,
+.recent-posts h4 + p {
   padding-bottom: 60px;
 }
 
-.featured-restaurants li {
+.featured-restaurants {
+  padding-top: 120%;
+}
+
+.recent-posts li {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -884,13 +891,6 @@ footer p {
 }
 
 @media (max-width: 1300px) {
-  .text {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-
-@media (max-width: 1300px) {
   .contact-us {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -898,12 +898,12 @@ footer p {
             flex-direction: column-reverse;
   }
   .contact-form, .contact-form--menu {
-    width: 90%;
-    right: 0;
-    margin: 0 auto;
+    width: 100%;
+    position: static;
+    margin: 40px 0;
   }
   .details {
-    padding: 0 0 50px;
+    padding: 50px 0;
     text-align: center;
   }
   .details ul {
@@ -942,15 +942,6 @@ footer p {
   padding-bottom: 30px;
 }
 
-@media (max-width: 1100px) {
-  .about .information {
-    display: block;
-  }
-  .about .information .info-quad {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1200px) {
   .cart {
     padding: 50px 0px;
@@ -967,13 +958,69 @@ footer p {
     width: 50%;
     min-width: 300px;
   }
+  .blog-area {
+    display: block;
+  }
+  .flex-right {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    padding-top: 40px;
+  }
+  article .job-posting {
+    border: 5px solid #FFD300;
+    padding: 50px 20px;
+  }
+  article h3,
+  article .user-comments {
+    padding: 50px 0 0;
+  }
+  .contact-form--menu {
+    padding: 0;
+  }
+  .flex-left {
+    width: 80%;
+    max-width: none;
+    margin: 0 auto;
+  }
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  aside img {
+    display: none;
+  }
+  .featured-restaurants,
+  .recent-posts {
+    padding: 20px;
+    width: calc(100%/ 2);
+  }
+  .featured-restaurants h4,
+  .recent-posts h4 {
+    padding-bottom: 10px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about .information {
+    display: block;
+  }
+  .about .information .info-quad {
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
   .main-nav {
     position: fixed;
     z-index: 200;
-    right: 9%;
+    right: 3%;
     top: 100px;
     display: none;
   }
@@ -1025,6 +1072,15 @@ footer p {
   }
 }
 
+@media (max-width: 800px) {
+  .cart .gift-card {
+    width: 100%;
+  }
+  .menu .text {
+    width: 80%;
+  }
+}
+
 @media (max-width: 700px) {
   .info-quad {
     margin-left: 0;
@@ -1049,11 +1105,43 @@ footer p {
   .banner {
     display: none;
   }
-  .contact-form, .contact-form--menu {
-    padding: 40px;
-  }
   .name,
   .email {
     width: 100%;
+  }
+  .contact-form, .contact-form--menu {
+    padding: 20px;
+  }
+  .flex-left {
+    width: 100%;
+  }
+  aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .featured-restaurants,
+  .recent-posts {
+    width: 100%;
+  }
+  .featured-restaurants h4 + p {
+    padding-bottom: 0;
+  }
+  .user:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .user-icon {
+    display: none;
+  }
+  .user-text {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .job-posting h2 {
+    font-size: 3rem;
   }
 }

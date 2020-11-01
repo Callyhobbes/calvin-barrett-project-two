@@ -48,12 +48,7 @@ article {
     .user-icon {
       width: 10%;
       max-width: 100px;
-    }
-    .user-text {
-      width: calc((100% - 10%) - 20px);
-      padding: 0 0 30px 30px;
-      position: relative;
-      top: -10px;
+      min-width: 60px;
     }
   }
 }
@@ -61,6 +56,13 @@ article {
 .user:nth-child(1) {
     margin-bottom: 60px;
   }
+
+.user-text {
+  width: calc((100% - 10%) - 20px);
+  padding: 0 0 30px 30px;
+  position: relative;
+  top: -10px;
+}
 
 aside {
   position: relative;
@@ -73,20 +75,28 @@ aside {
   }
 }
 
-.featured-restaurants {
+.featured-restaurants,
+.recent-posts {
   position: relative;
   background-color: $almostBlack;
-  padding: 120% 30px 30px;
+  padding: 0 30px 30px;
   h4 + p {
     padding-bottom: 60px;
   }
-  li {
-    @include fontStyling(2rem, 400, 1px);
-    @include lineHeight(28px);
-    font-family: 'Barlow', sans-serif;
-    margin: 10px;
-    padding-left: 10px;
-    position: relative;
-    left: 10px;
-  }
 }
+
+.featured-restaurants {
+  padding-top: 120%;
+}
+
+.recent-posts {
+    li {
+      @include fontStyling(2rem, 400, 1px);
+      @include lineHeight(28px);
+      font-family: 'Barlow', sans-serif;
+      margin: 10px;
+      padding-left: 10px;
+      position: relative;
+      left: 10px;
+    }
+  }
