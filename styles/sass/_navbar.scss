@@ -66,13 +66,12 @@
   right: 10%;
   top: 55px;
   padding: 5px 10px;
-  border-radius: 10px;
-  background-color: $almostBlack;
   .hamburger {
     width: 40px;
     height: 3px;
     margin: 8px 0px;
-    background-color: $white;
+    background-color: $yellow;
+    box-shadow: 2px 2px 2px $almostBlack;
   }
 }
 
