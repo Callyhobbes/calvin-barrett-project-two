@@ -5,17 +5,16 @@
   flex-direction: row-reverse;
 }
 
+.pine {
+  background-color: $pine;
+}
+
+// job posting main section
 .flex-right {
   width: 60%;
   margin-left: 5%;
   position: relative;
   top: -200px;
-}
-
-.flex-left {
-  width: 35%;
-  max-width: 500px;
-  margin: 120px 30px 0 7%;
 }
 
 article {
@@ -35,10 +34,6 @@ article {
   .job-posting > p {
     padding-bottom: 25px;
   }
-}
-
-.pine {
-  background-color: $pine;
 }
 
 .user-comments {
@@ -64,6 +59,14 @@ article {
   top: -10px;
 }
 
+// aside main section
+.flex-left {
+  width: 35%;
+  max-width: 500px;
+  margin: 120px 30px 0 7%;
+}
+
+// setting image
 aside {
   position: relative;
   img {
@@ -75,6 +78,8 @@ aside {
   }
 }
 
+
+// styling the dark feature to be responsive at larger screen sizes
 .featured-restaurants,
 .recent-posts {
   position: relative;
@@ -89,14 +94,23 @@ aside {
   padding-top: 120%;
 }
 
+// styling of recent post links
 .recent-posts {
-    li {
-      @include fontStyling(2rem, 400, 1px);
-      @include lineHeight(28px);
-      font-family: 'Barlow', sans-serif;
-      margin: 10px;
-      padding-left: 10px;
-      position: relative;
-      left: 10px;
+  li {
+    @include fontStyling(2rem, 400, 1px);
+    @include lineHeight(28px);
+    font-family: 'Barlow', sans-serif;
+    margin: 10px;
+    padding-left: 10px;
+    position: relative;
+    left: 10px;
+    a {
+      text-decoration: none;
+      color: $white;
+      &:hover,
+      &:focus {
+        color: $yellow;
+      }
     }
   }
+}

@@ -7,6 +7,7 @@
   height: 75vh;
   min-height: 500px;
   padding-top: 50px;
+  // Styling for different title backgrounds
   &--index {
     @extend .title;
     background-image: url("../assets/home-header.jpg");
@@ -21,7 +22,7 @@
   }
 }
 
-//Styling of Desktop Nav Bar
+// Styling of Desktop Nav Bar
 .main-nav {
   padding: 20px 0;
   &__list {
@@ -48,7 +49,7 @@
   }
 }
 
-//Positioning of Pop-Out Onion Rings
+// Positioning of Pop-Out Onion Rings
 .pop-out {
   img {
     position: absolute;
@@ -59,7 +60,7 @@
   }
 }
 
-//Styling of Mobile Nav Bar
+// Styling of Mobile Nav Bar
 .mobile-bars {
   visibility: hidden;
   z-index: 100;
@@ -70,6 +71,7 @@
   transition: all .5s ease-in-out;
 }
 
+// Create burger mobile menu
 .burger {
   width: 40px;
   height: 3px;
@@ -84,6 +86,7 @@
     height: 3px;
     background-color: $yellow;
     box-shadow: 2px 2px 2px $almostBlack;
+    transition: all .5s ease-in-out;
   }
 }
 
@@ -95,6 +98,7 @@
   transform: translateY(10px);
 }
 
+// Opaque checkbox overlay
 .mobile-checkbox {
   z-index: 150;
   height: 50px;

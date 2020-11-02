@@ -63,6 +63,7 @@ p {
   }
 }
 
+// Find out more & read more button styling
 a.button {
   @include fontStyling(2.24rem, 400);
   @include lineHeight(41.6px);
@@ -94,6 +95,7 @@ a.button {
   }
 }
 
+// Submit button for forms
 button {
   @include fontStyling(2.24rem, 400);
   @include lineHeight(41.6px);
@@ -113,6 +115,7 @@ button {
   }
 }
 
+// styling for H1 title
 span {
   display: block;
   color: $almostBlack;
@@ -154,6 +157,10 @@ time {
   @include lineHeight(28px);
   font-family: 'Barlow', sans-serif;
   color: $yellow;
+}
+
+figcaption {
+  display: none;
 }
 
 .fab {

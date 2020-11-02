@@ -1,4 +1,5 @@
 @media (max-width: 1300px) {
+  // vertical stacking of information on contact page
   .contact-us {
     flex-direction: column-reverse;
   }
@@ -21,6 +22,7 @@
     }
   }
 
+  // vertical stacking of menu section on index page
   .menu {
     flex-direction: column;
     width: 100%;
@@ -35,6 +37,9 @@
       width: 60%;
       padding: 30px;
       text-align: center;
+      p {
+        text-align: left;
+      }
     }
   }
 }
@@ -44,6 +49,7 @@
   }
 
 @media (max-width: 1200px) {
+  // vertical stacking of nature section on index page
   .cart {
     padding: 50px 0px;
   }
@@ -61,12 +67,12 @@
     }
   }
 
-  // Format Contact Page
+  // vertical stacking of information on blog page
   .blog-area {
     display: block;
   }
 
-  // Job Posting Adjustment
+  // blog page job posting adjustment
   .flex-right {
     width: 80%;
     margin: 0 auto;
@@ -90,7 +96,7 @@
     padding: 0;
   }
 
-  // Aside Section Adjustment
+  // blog page aside section adjustment
   .flex-left {
   width: 80%;
   max-width: none;
@@ -117,6 +123,7 @@
 }
 
 @media (max-width: 1100px) {
+  // vertical stacking of about section on index page
   .about .information {
     display: block;
     .info-quad {
@@ -126,15 +133,15 @@
 }
 
 @media (max-width: 900px) {
-
-  //Adjust logo to top left and move nav bar to right of viewport
+  // Move nav bar to right of viewport for mobile nav bar
   .main-nav {
     position: fixed;
-    z-index: 200;
+    z-index: 50;
     right: 0;
-    top: 100px;
+    top: 30px;
     display: none;
-    padding-right: 3%;
+    padding-top: 80px;
+    padding-right: 2%;
     &__list {
       flex-flow: column;
       &-item {
@@ -144,12 +151,35 @@
     }
   }
 
+  // add mobile nav
+  .mobile-bars {
+    visibility: visible;
+  }
+
+  // nav bar checkbox interaction
   input:checked ~ .main-nav {
     display: block;
     background-color: rgba($almostBlack, .5);
     border-radius: 20px 0 0px 20px;
   }
 
+  input:checked ~ .mobile-bars > .burger::before  {
+    transform: rotate(90deg)
+  }
+
+  input:checked ~ .mobile-bars > .burger {
+    transform: rotate(-45deg)
+  }
+
+  input:checked ~ .mobile-bars > .burger::after {
+    display: none;
+  }
+
+  // input:checked ~ .mobile-bars > .burger{
+
+  // }
+
+  //adjust logo to top left of index page
   h1 {
     position: absolute;
     left: 5%;
@@ -163,27 +193,11 @@
     }
   }
 
-  /* Gallery Adjustment to 2 pictures */
-  .gallery-images ul {
-    li {
-      width: calc((100% - 6%) / 2);
-    }
-
-    li:nth-of-type(2) {
-      display: none;
-    }
-  }
-
-  //Hide Pop-Out Onion Rings
+  // hide pop-out onion rings salad picture
   .pop-out {
     img {
       display: none;
     }
-  }
-
-  // Add Mobile Nav
-  .mobile-bars {
-    visibility: visible;
   }
 
   // remove excess padding in about section for Pop-Out
@@ -191,12 +205,25 @@
     padding: 60px 0;
   }
 
-  h2 {
+  // changes to the index page cart section font line height
+  h2.yellow-text{
     line-height: 58px;
   }
+
+  // gallery adjustment to 2 pictures on index page
+.gallery-images ul {
+  li {
+    width: calc((100% - 6%) / 2);
+  }
+
+  li:nth-of-type(2) {
+    display: none;
+  }
+}
 }
 
 @media (max-width: 800px) {
+  // index page expanding text area
   .cart .gift-card {
     width: 100%;
   }
@@ -207,7 +234,7 @@
 }
 
 @media (max-width: 700px) {
-
+  // stacking icons on top of text in index page about section
   .info-quad {
     margin-left: 0;
     display: flex;
@@ -233,12 +260,12 @@
   }
 
 
-  // Form Adjsutment for Smaller Screens
+  // form adjsutment for smaller viewports
   .contact-form {
     padding: 20px;
   }
   
-  // Stack Aside Information
+  // stack Aside information
   .flex-left {
     width: 100%;
   }
@@ -271,6 +298,7 @@
 }
 
 @media (max-width: 520px) {
+  // adjusted employment opportunities title for small viewports
   .job-posting h2 {
     font-size: 3rem;
   }
